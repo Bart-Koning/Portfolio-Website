@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+			<title>  Portfolio </title>
+			<link rel="stylesheet" type="text/css" href="../style.css">
+			<meta name="author" content="Bart Koning">
+			<meta name="keywords" content="Digital Portfolio of Bart Koning">
+			<meta name="description" content="I've made my digital portfolio for Professional development on this website.">
+	</head>
+
+
+	<body>
+
+		<div id="wrapper">
+
+			<header>
+				<h1>
+					Digital Portfolio of Bart Koning
+				</h1>
+			</header>
+
+			<nav-js></nav-js>
+
+			<article>
+                <p>
+					When I was younger, I was deeply involved in launchpadding. A Novation Launchpad is a MIDI controller laid out in a grid, with LEDs behind each button. 
+					This setup allows performers to create synchronized light shows and finger-drumming performances, which translate especially well on camera.
+					<br><br>
+					After adding two more Launchpads to my setup, I wanted to create something custom. Within the launchpadding community, I learned about so-called “<i>underlights</i>” which are WS2812B LED strips connected to an Arduino-based microcontroller, enabling individual LEDs to be controlled via MIDI signals. 
+					This made it possible to extend the light show beyond the Launchpads themselves and onto the desk surface.
+					<br><br>
+					<img id="NoHover" src="Teensy_Launchpad_Underlights/Teensy_Schematic.png" alt="" title="" width="300" height="300">
+					Initially, the LEDs suffered from noticeable latency. After investigating the issue, we discovered that the problem was caused by an excessive number of update calls being sent to the LEDs. 
+					By limiting the update rate, the latency was resolved. With this optimization in place, we were able to reliably control over <b>300 LEDs (5-meter strips)</b> using a single <b>Teensy LC</b> microcontroller.
+					<br><br><br>
+					<div class = ShowcasePic>
+						<video width="270" height="480" controls>
+  							<source src="Teensy_Launchpad_Underlights/VID_20220501_140952.mp4" type="video/mp4">
+						</video>
+                        <video width="270" height="480" controls>
+  							<source src="Teensy_Launchpad_Underlights/VID_20220127_111517.mp4" type="video/mp4">
+						</video>
+                    </div>
+					<br><br><br>
+					<i>Cover image credits: UltraAurora, who —along with Mat1jaczyyy and Yaros— also contributed to the coding.
+					<br><br>
+					I’ll add a GitHub link to the project once I have an account on there.</i>
+
+
+					
+				</p>
+			</article>
+
+			
+
+		</div>
+		
+		<footer-js></footer-js>
+
+		<script src="../NavFooterManager.js" defer></script>	
+	</body>
+		
+
+</html>

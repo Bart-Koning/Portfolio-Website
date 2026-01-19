@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+			<title>  Portfolio </title>
+			<link rel="stylesheet" type="text/css" href="../style.css">
+			<meta name="author" content="Bart Koning">
+			<meta name="keywords" content="Digital Portfolio of Bart Koning">
+			<meta name="description" content="I've made my digital portfolio for Professional development on this website.">
+	</head>
+
+
+	<body>
+
+		<div id="wrapper">
+
+			<header>
+				<h1>
+					Digital Portfolio of Bart Koning
+				</h1>
+			</header>
+
+			<nav-js></nav-js>
+
+			<article>
+				<p>
+					For the final assignment of the first CreaTe module, I participated in a hackathon themed Sense, Process, Act (SPA). 
+					The goal was to design and build a circuit that included both a sensor, an actuator and an NE555. 
+					Together with my team, I developed a small electronic piano that generates different tones using two NE555 timer ICs, a couple buttonsm, a buzzer and a photoresistor.<br><br>
+				</p>
+
+				<div class="ShowcasePic">
+				<img id="NoHover" src="Hackathon_Module_1/Electronic_inside_Hackathon_Module_1.jpg" alt="" title="" width="600" height="366">
+				</div>
+
+				<h3>System Design</h3>
+				<p><br>
+					The first NE555 timer was configured in monostablemode and connected to a photoresistor (LDR).
+					The LDR’s resistance changes with light intensity, which determined whether the second 555 oscillator was enabled.
+					This stage acted as a light-controlled swigtch, allowing the piano to function only if the lid was opened.<br><br>
+				</p>
+				<p>
+					The second NE555 operated in astable mode to produce oscillating square waves.
+					Multiple buttons were connected in series with different resistor values.
+					Pressing a button inserted a specific resistance into the timer chip.
+					Since the 555’s frequency is dependant on the resistance of the circuit,
+					changing the resistance directly changed the oscillation frequency.
+					This allowed each button to generate a unique tone.<br>
+					The output signal from the astable 555 was fed into a passive piezo buzzer.
+					The buzzer converted the square-wave frequencies into audible sound.<br><br><br>
+				</p>
+
+				<div class="ShowcasePic">
+					<img id="NoHover" src="Hackathon_Module_1/Circuit_drawing.jpg" alt="" title="" width="400" height="700">
+				</div>
+				
+				<h3>Result</h3>
+				<p><br>
+					The final circuit successfully demonstrated the SPA principle:<br>
+					Sense: detecting light levels with an LDR, controlling the volume of the button with a potentionmeter, and sensing user input via the keys.<br>
+					Process: generating frequency-dependent signals using the NE555<br>
+					Act: producing sound through a piezo buzzer<br>
+					The project provided hands-on experience with analog electronics, timing circuits, and sensor-driven interaction. And was a fun challenge!
+				</p>
+				
+			</article>
+
+			
+
+		</div>
+		
+		<footer-js></footer-js>
+
+		<script src="../NavFooterManager.js" defer></script>	
+	</body>
+		
+
+</html>
